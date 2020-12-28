@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Esztermantra</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/> -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script src="navbar.js" defer></script>
 </head>
 <body>
     <div class="grid-container">
         <header class="header">
           <img src="assets\img\logo.png" alt="" id="header_logo">
-            <nav id="header-nav">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">About Me</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </nav>
+          <button id="ham" onclick="toggleHamburger()"></button>
+          <nav id="navbar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Shop</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+          </nav>
         </header>
         <div class="banner"></div>
         <main class="main">

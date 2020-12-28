@@ -388,8 +388,8 @@ a:hover {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 0.5fr 0.58fr 2fr 0.7fr 2fr 1fr;
-      grid-template-rows: 0.5fr 0.58fr 2fr 0.7fr 2fr 1fr;
+  -ms-grid-rows: 0.5fr 0.58fr 2fr 0.7fr 1fr 1fr;
+      grid-template-rows: 0.5fr 0.58fr 2fr 0.7fr 1fr 1fr;
   gap: 0% 0px;
       grid-template-areas: "header" "banner" "main" "parallax" "main2" "footer";
 }
@@ -418,36 +418,104 @@ a:hover {
   width: 15%;
 }
 
-#header-nav {
+@media screen and (max-width: 1024px) {
+  #ham {
+    position: absolute;
+    /* always keep ham on top of everything */
+    z-index: 1000;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    /* show the menu image */
+    background-size: 100%;
+  }
+  .showClose {
+    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+  }
+  .showNav {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  #navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5%;
+    background-color: #000;
+    overflow: hidden;
+    color: white;
+    /* hide the menu above the screen by default */
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    /* transition adds a little animation when sliding in and out the menu */
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  }
+  #navbar ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #navbar ul a {
+    color: #fff;
+  }
+  #navbar ul a:hover {
+    text-decoration: none;
+    border-color: #fff;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  #ham {
+    display: none;
+  }
+  #navbar ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  #navbar ul a {
+    color: #000;
+  }
+  #navbar ul a:hover {
+    text-decoration: none;
+    border-color: #000;
+  }
+}
+
+#navbar {
   -webkit-box-flex: 0.3;
       -ms-flex-positive: 0.3;
           flex-grow: 0.3;
 }
 
-#header-nav ul {
+#navbar ul {
   margin: 0;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-#header-nav ul li {
+#navbar ul li {
   list-style: none;
   margin: 0 3%;
 }
 
-#header-nav a {
+#navbar a {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
-  color: #000;
   text-decoration: none;
   text-align: center;
   border-bottom: 1.5px solid rgba(255, 255, 255, 0);
@@ -455,11 +523,6 @@ a:hover {
   font-size: 1rem;
   line-height: normal;
   padding-bottom: 1px;
-}
-
-#header-nav a:hover {
-  text-decoration: none;
-  border-color: #000000;
 }
 
 .banner {

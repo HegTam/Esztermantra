@@ -433,18 +433,11 @@ a:hover {
     /* show the menu image */
     background-size: 100%;
   }
-  .showClose {
-    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
-  }
-  .showNav {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
   #navbar {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 5%;
+    padding: 5% 15% 5% 5%;
     background-color: #000;
     overflow: hidden;
     color: white;
@@ -452,10 +445,10 @@ a:hover {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
     /* transition adds a little animation when sliding in and out the menu */
-    -webkit-transition: -webkit-transform 0.2s ease;
-    transition: -webkit-transform 0.2s ease;
-    transition: transform 0.2s ease;
-    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+    -webkit-transition: -webkit-transform 500ms ease;
+    transition: -webkit-transform 500ms ease;
+    transition: transform 500ms ease;
+    transition: transform 500ms ease, -webkit-transform 500ms ease;
   }
   #navbar ul {
     -webkit-box-orient: vertical;

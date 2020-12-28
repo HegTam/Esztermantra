@@ -9,7 +9,7 @@ console.log(getComputedStyle(navbar).getPropertyValue("-webkit-transform"));
 function toggleHamburger() {
     if (getComputedStyle(ham).getPropertyValue('background-image') === hamUrl) {
         ham.style.backgroundImage = closeUrl;
-        navbar.style.transform = "translateY(0)";
+        navbar.style.transform = "translateY(0%)";
     }
     else {
         ham.style.backgroundImage = hamUrl;

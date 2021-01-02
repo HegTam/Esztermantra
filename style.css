@@ -384,13 +384,15 @@ a:hover {
 }
 
 @media screen and (max-width: 1024px) {
+  .header {
+    margin: 0;
+  }
   .header #header_logo {
-    max-height: 100%;
+    max-height: 100vh;
     max-width: 100%;
   }
   .header #ham {
     position: absolute;
-    /* always keep ham on top of everything */
     z-index: 1000;
     top: 20px;
     right: 20px;
@@ -398,9 +400,14 @@ a:hover {
     height: 36px;
     border: none;
     cursor: pointer;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.5);
     /* show the menu image */
     background-size: 100%;
+    -webkit-transition: background-color 600ms ease;
+    transition: background-color 600ms ease;
+  }
+  .header #ham:focus {
+    border: black solid 2px;
   }
   .header #navbar {
     position: absolute;
@@ -435,6 +442,9 @@ a:hover {
 }
 
 @media screen and (min-width: 1025px) {
+  .header {
+    margin: 10px 0;
+  }
   .header #header_logo {
     width: 15%;
   }
@@ -454,37 +464,6 @@ a:hover {
     text-decoration: none;
     border-color: #000;
   }
-}
-
-.grid-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 0.5fr 0.58fr 2fr 0.7fr 1fr 1fr;
-      grid-template-rows: 0.5fr 0.58fr 2fr 0.7fr 1fr 1fr;
-  gap: 0% 0px;
-      grid-template-areas: "header" "banner" "main" "parallax" "main2" "footer";
-}
-
-.header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: header;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 10px 0;
 }
 
 #navbar {
@@ -521,6 +500,36 @@ a:hover {
   padding-bottom: 1px;
 }
 
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 0.5fr 0.58fr 2fr 0.7fr 1fr 1fr;
+      grid-template-rows: 0.5fr 0.58fr 2fr 0.7fr 1fr 1fr;
+  gap: 0% 0px;
+      grid-template-areas: "header" "banner" "main" "parallax" "main2" "footer";
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .banner {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -529,6 +538,7 @@ a:hover {
   background-attachment: scroll;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main {

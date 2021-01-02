@@ -8,17 +8,20 @@
 
 
 // @media screen and (min-width: 1500px)
+
+// HEADER & NAVBAR
+
 @media screen and ( max-width: 1024px )
 
     .header
+        margin: 0
 
         #header_logo
-            max-height: 100%
+            max-height: 100vh
             max-width: 100%
 
         #ham
             position: absolute
-            /* always keep ham on top of everything */
             z-index: 1000
             top: 20px
             right: 20px
@@ -26,10 +29,14 @@
             height: 36px
             border: none
             cursor: pointer
-            background-color: transparent
+            background-color: rgba(255, 255, 255, 0.5)
             /* show the menu image */
             // background-image: url("https://ljc-dev.github.io/testing0/ham.svg")
             background-size: 100%
+            transition: background-color 600ms ease
+
+            &:focus
+                border: black solid 2px
 
         #navbar
             position: absolute
@@ -59,6 +66,7 @@
 @media screen and ( min-width: 1025px )
 
     .header
+        margin: 10px 0
 
         #header_logo
             width: 15%

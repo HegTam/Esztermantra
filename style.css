@@ -674,6 +674,21 @@ a:hover {
   }
 }
 
+@media screen and (orientation: landscape) {
+  .parallax {
+    height: 50vh;
+    background-size: 100%;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .parallax {
+    height: 50vw;
+    background-size: cover;
+    background-position-x: 80%;
+  }
+}
+
 @media screen and (max-width: 399px) {
   .footer {
     -ms-grid-columns: 1fr;
@@ -809,11 +824,8 @@ a:hover {
 }
 
 .parallax {
-  grid-area: parallax;
-  height: 50vh;
   background-image: url("assets/img/parallax.jpg");
   background-attachment: fixed;
-  background-size: cover;
   background-repeat: no-repeat;
 }
 

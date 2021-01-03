@@ -23,10 +23,7 @@
 .main
   grid-area: main
   display: grid
-  grid-template-columns: 1fr 1fr
-  grid-template-rows: 1fr 1fr 1fr
   gap: 30px 30px
-  grid-template-areas: "tile1 tile2" "tile3 tile2" "offset offset"
   padding: 30px
 
 .tile1
@@ -53,10 +50,7 @@
 
 .offset
   display: grid
-  grid-template-columns: 1.2fr 0.8fr
-  grid-template-rows: 1fr
   gap: 30px 30px
-  grid-template-areas: "offset-tile1 offset-tile2"
   grid-area: offset
 
   div
@@ -77,10 +71,7 @@
 
 .main2
   display: grid
-  grid-template-columns: 1fr 1fr
-  grid-template-rows: 1fr
   gap: 30px 30px
-  grid-template-areas: "main2-tile1 main2-tile2"
   grid-area: main2
   padding: 30px
 
@@ -93,137 +84,111 @@
 .main2-tile2
   grid-area: main2-tile2
 
-.footer .site-footer
+.footer
   grid-area: footer
-
-.site-footer
+  display: grid
   background-color: #26272b
-  padding: 45px 0 20px
-  font-size: 15px
+  padding: 45px 20px 20px
+  font-size: 0.6rem
   line-height: 24px
   color: #737373
+
+  .footer-about
+    grid-area: about
+    margin: 0 15px
+
+  .footer-categories
+    grid-area: categories
+    margin: 0 15px
+
+  .footer-quicklinks
+    grid-area: quicklinks
+    margin: 0 15px
+
+  hr
+    grid-area: hr
+    width: 90%
+
+  h6
+    color: #fff
+    font-size: 0.8rem
+    text-transform: uppercase
+    margin-top: 5px
+    letter-spacing: 2px
+
+  .footer-links
+    padding-left: 0
+    list-style: none
+
+    li
+      display: block
+
+    a
+      color: #737373
+
+      &:active, &:focus, &:hover
+        color: #3366cc
+        text-decoration: none
 
   hr
     border-top-color: #bbb
     opacity: 0.5
 
-    &.small
-      margin: 20px 0
+  .footer-bottom
+    grid-area: bottom
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: flex-end
 
-  h6
-    color: #fff
-    font-size: 16px
-    text-transform: uppercase
-    margin-top: 5px
-    letter-spacing: 2px
+    .copyright-text
+      margin-bottom: 0
+      display: inline
 
-  a
-    color: #737373
+    .social-icons
+      display: inline
+      float: right
+      padding-left: 0
+      margin-bottom: 0
+      text-align: right
 
-    &:hover
-      color: #3366cc
-      text-decoration: none
+      li
+        list-style: none
+        display: inline-block
+        margin-bottom: 4px
 
-.footer-links .site-footer
-  padding-left: 0
-  list-style: none
+        a
+          background-color: #eceeef
+          color: #818a91
+          font-size: 16px
+          display: inline-block
+          // line-height: 44px
+          width: 2rem
+          height: 2rem
+          text-align: center
+          margin-right: 8px
+          padding: auto
+          border-radius: 100%
+          -webkit-transition: all .2s linear
+          -o-transition: all .2s linear
+          transition: all 0.2s linear
 
-  li
-    display: block
+          &:active, &:focus, &:hover
+            color: #fff
+            background-color: #29aafe
 
-  a
-    color: #737373
+          &.facebook:hover
+            background-color: #3b5998
 
-    &:active, &:focus, &:hover
-      color: #3366cc
-      text-decoration: none
+          &.twitter:hover
+            background-color: #00aced
 
-  &.inline li
-    display: inline-block
+          &.linkedin:hover
+            background-color: #007bb6
 
-.site-footer .social-icons
-  grid-area: footer
-  text-align: right
+          &.dribbble:hover
+            background-color: #ea4c89
 
-  a
-    width: 40px
-    height: 40px
-    line-height: 40px
-    margin-left: 6px
-    margin-right: 0
-    border-radius: 100%
-    background-color: #33353d
-
-.copyright-text
-  margin: 0
-
-@media (max-width: 991px)
-  .site-footer [class^=col-]
-    margin-bottom: 30px
-
-@media (max-width: 767px)
-  .site-footer
-    padding-bottom: 0
-
-    .copyright-text, .social-icons
-      text-align: center
-
-.social-icons
-  padding-left: 0
-  margin-bottom: 0
-  list-style: none
-
-  li
-    display: inline-block
-    margin-bottom: 4px
-
-    &.title
-      margin-right: 15px
-      text-transform: uppercase
-      color: #96a2b2
-      font-weight: 700
-      font-size: 13px
-
-  a
-    background-color: #eceeef
-    color: #818a91
-    font-size: 16px
-    display: inline-block
-    line-height: 44px
-    width: 44px
-    height: 44px
-    text-align: center
-    margin-right: 8px
-    border-radius: 100%
-    -webkit-transition: all .2s linear
-    -o-transition: all .2s linear
-    transition: all 0.2s linear
-
-    &:active, &:focus, &:hover
-      color: #fff
-      background-color: #29aafe
-
-  &.size-sm a
-    line-height: 34px
-    height: 34px
-    width: 34px
-    font-size: 14px
-
-  a
-    &.facebook:hover
-      background-color: #3b5998
-
-    &.twitter:hover
-      background-color: #00aced
-
-    &.linkedin:hover
-      background-color: #007bb6
-
-    &.dribbble:hover
-      background-color: #ea4c89
-
-@media (max-width: 767px)
-  .social-icons li.title
-    display: block
-    margin-right: 0
-    font-weight: 600
+          .fa
+            font-size: 1.2rem
+            line-height: 2rem

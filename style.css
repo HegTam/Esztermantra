@@ -771,30 +771,15 @@ a:hover {
   display: grid;
   gap: 30px 30px;
   padding: 30px;
+  margin: 0 auto;
 }
 
 .main .tile1 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  gap: 0px 0px;
-      grid-template-areas: ".";
   grid-area: tile1;
   background-color: grey;
 }
 
 .main .tile2 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
-  gap: 0px 0px;
-      grid-template-areas: ".";
   grid-area: tile2;
   background-color: grey;
 }

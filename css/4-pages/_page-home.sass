@@ -13,22 +13,20 @@
   display: grid
   gap: 30px 30px
   padding: 30px
+  margin: 0 auto
+
+  div
+    // width: calc( 90/ -  )
 
   .tile1
-    display: grid
-    grid-template-columns: 1fr
-    grid-template-rows: 1fr
-    gap: 0px 0px
-    grid-template-areas: "."
     grid-area: tile1
     background-color: grey
+    // &::before
+    //   content:     ""
+    //   display:     block
+    //   padding-top: 100% /* initial ratio of 1:1*/
 
   .tile2
-    display: grid
-    grid-template-columns: 1fr
-    grid-template-rows: 1fr
-    gap: 0px 0px
-    grid-template-areas: "."
     grid-area: tile2
     background-color: grey
 

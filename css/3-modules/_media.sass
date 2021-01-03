@@ -75,23 +75,23 @@
 
 // MAIN
 
-@media screen and (max-width: 1023px)
+@media screen and (max-width: 499px)
     .main
-        grid-template-columns: 1fr 1fr
-        grid-template-rows: 1fr 1fr 1fr
-        grid-template-areas: "tile1 tile2" "tile3 tile2" "offset offset"
+        grid-template-columns: 1fr
+        grid-template-rows: 1fr 2fr 1fr 2fr
+        grid-template-areas: "tile1" "tile2" "tile3" "offset"
 
         .offset
-            grid-template-columns: 1.2fr 0.8fr
-            grid-template-rows: 1fr
-            grid-template-areas: "offset-tile1 offset-tile2"
+            grid-template-columns: 1fr
+            grid-template-rows: 1fr 1fr
+            grid-template-areas: "offset-tile1" "offset-tile2"
 
     .main2
-        grid-template-columns: 1fr 1fr
-        grid-template-rows: 1fr
-        grid-template-areas: "main2-tile1 main2-tile2"
+        grid-template-columns: 1fr
+        grid-template-rows: 1fr 1fr
+        grid-template-areas: "main2-tile1" "main2-tile2"
 
-@media screen and (min-width: 1024px)
+@media screen and (min-width: 500px)
     .main
         grid-template-columns: 1fr 1fr
         grid-template-rows: 1fr 1fr 1fr
@@ -121,13 +121,17 @@
         grid-template-columns: 1fr
         grid-template-rows: auto auto auto auto auto
         grid-template-areas: "about" "categories" "quicklinks" "hr" "bottom"
+        // justify-items: center
+        text-align: center
+
+        // .footer-bottom
+        //     justify-self: normal
 
 @media screen and (min-width: 400px) and ( max-width: 799px )
     .footer
         grid-template-columns: 1fr 1fr
         grid-template-rows: auto auto auto auto
         grid-template-areas: "about about" "categories quicklinks" "hr hr" "bottom bottom"
-
 
 @media screen and ( min-width: 800px )
     .footer

@@ -579,20 +579,7 @@ a:hover {
   padding-bottom: 1px;
 }
 
-.grid-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 0.5fr 0.58fr 2fr 0.7fr 1fr 1fr;
-      grid-template-rows: 0.5fr 0.58fr 2fr 0.7fr 1fr 1fr;
-  gap: 0% 0px;
-      grid-template-areas: "header" "banner" "main" "parallax" "main2" "footer";
-}
-
 .header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: header;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -610,9 +597,8 @@ a:hover {
 }
 
 .banner {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: banner;
+  height: 40vh;
   background-image: url("assets/img/banner.jpg");
   background-attachment: scroll;
   background-size: cover;
@@ -621,16 +607,15 @@ a:hover {
 }
 
 .main {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: main;
+  height: 90vh;
   display: -ms-grid;
   display: grid;
   gap: 30px 30px;
   padding: 30px;
 }
 
-.tile1 {
+.main .tile1 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -643,7 +628,7 @@ a:hover {
   background-color: grey;
 }
 
-.tile2 {
+.main .tile2 {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -656,34 +641,33 @@ a:hover {
   background-color: grey;
 }
 
-.tile3 {
+.main .tile3 {
   grid-area: tile3;
   background-color: grey;
 }
 
-.offset {
+.main .offset {
   display: -ms-grid;
   display: grid;
   gap: 30px 30px;
   grid-area: offset;
 }
 
-.offset div {
+.main .offset div {
   background-color: grey;
 }
 
-.offset-tile1 {
+.main .offset .offset-tile1 {
   grid-area: offset-tile1;
 }
 
-.offset-tile2 {
+.main .offset .offset-tile2 {
   grid-area: offset-tile2;
 }
 
 .parallax {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: parallax;
+  height: 50vh;
   background-image: url("assets/img/parallax.jpg");
   background-attachment: fixed;
   background-size: cover;
@@ -693,9 +677,8 @@ a:hover {
 .main2 {
   display: -ms-grid;
   display: grid;
+  height: 45vh;
   gap: 30px 30px;
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
   grid-area: main2;
   padding: 30px;
 }
@@ -704,17 +687,15 @@ a:hover {
   background-color: grey;
 }
 
-.main2-tile1 {
+.main2 .main2-tile1 {
   grid-area: main2-tile1;
 }
 
-.main2-tile2 {
+.main2 .main2-tile2 {
   grid-area: main2-tile2;
 }
 
 .footer {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
   grid-area: footer;
   display: -ms-grid;
   display: grid;

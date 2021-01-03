@@ -1,9 +1,3 @@
-.grid-container
-  display: grid
-  grid-template-columns: 1fr
-  grid-template-rows: 0.5fr 0.58fr 2fr 0.7fr 1fr 1fr
-  gap: 0% 0px
-  grid-template-areas: "header" "banner" "main" "parallax" "main2" "footer"
 
 .header
   grid-area: header
@@ -14,6 +8,7 @@
 
 .banner
   grid-area: banner
+  height: 40vh
   background-image: url("assets/img/banner.jpg")
   background-attachment: scroll
   background-size: cover
@@ -22,48 +17,50 @@
 
 .main
   grid-area: main
+  height: 90vh
   display: grid
   gap: 30px 30px
   padding: 30px
 
-.tile1
-  display: grid
-  grid-template-columns: 1fr
-  grid-template-rows: 1fr
-  gap: 0px 0px
-  grid-template-areas: "."
-  grid-area: tile1
-  background-color: grey
-
-.tile2
-  display: grid
-  grid-template-columns: 1fr
-  grid-template-rows: 1fr
-  gap: 0px 0px
-  grid-template-areas: "."
-  grid-area: tile2
-  background-color: grey
-
-.tile3
-  grid-area: tile3
-  background-color: grey
-
-.offset
-  display: grid
-  gap: 30px 30px
-  grid-area: offset
-
-  div
+  .tile1
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr
+    gap: 0px 0px
+    grid-template-areas: "."
+    grid-area: tile1
     background-color: grey
 
-.offset-tile1
-  grid-area: offset-tile1
+  .tile2
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr
+    gap: 0px 0px
+    grid-template-areas: "."
+    grid-area: tile2
+    background-color: grey
 
-.offset-tile2
-  grid-area: offset-tile2
+  .tile3
+    grid-area: tile3
+    background-color: grey
+
+  .offset
+    display: grid
+    gap: 30px 30px
+    grid-area: offset
+
+    div
+      background-color: grey
+
+    .offset-tile1
+      grid-area: offset-tile1
+
+    .offset-tile2
+      grid-area: offset-tile2
 
 .parallax
   grid-area: parallax
+  height: 50vh
   background-image: url("assets/img/parallax.jpg")
   background-attachment: fixed
   background-size: cover
@@ -71,6 +68,7 @@
 
 .main2
   display: grid
+  height: 45vh
   gap: 30px 30px
   grid-area: main2
   padding: 30px
@@ -78,11 +76,11 @@
   div
     background-color: grey
 
-.main2-tile1
-  grid-area: main2-tile1
+  .main2-tile1
+    grid-area: main2-tile1
 
-.main2-tile2
-  grid-area: main2-tile2
+  .main2-tile2
+    grid-area: main2-tile2
 
 .footer
   grid-area: footer
